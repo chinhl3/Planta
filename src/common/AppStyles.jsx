@@ -1,3 +1,4 @@
+
 import { StyleSheet } from 'react-native'
 export default styles = StyleSheet.create({
     backgroundColorliner1: {
@@ -14,7 +15,7 @@ export default styles = StyleSheet.create({
         height: 300
     },
     button_style: {
-        width: 300, 
+        width: 300,
         height: 50,
         borderRadius: 15,
         justifyContent: 'center',
@@ -22,7 +23,20 @@ export default styles = StyleSheet.create({
         marginLeft: 50
     },
     liner_color: {
-       color1: ['#007537', '#4CAF50']
+        color1: ['#007537', '#4CAF50']
+    },
+    containerInput: {
+        width: 300,
+        height: 46,
+        borderRadius: 10,
+        flexDirection: 'row',
+        paddingHorizontal: 10,
+        alignItems: 'center'
+    },
+    icon: {
+        width: 24, height: 24
     }
 
 })
+
+

@@ -1,8 +1,10 @@
-import { Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import style from '../../../common/AppStyles';
 import Img_header from '../../../common/Img_header'
 import Buton_app from '../../../common/Buton_app';
+import AppInput from '../../../common/AppInput';
+
 const Log_in = () => {
     const img_style = () => {
         return {
@@ -12,6 +14,33 @@ const Log_in = () => {
     const btl_style = () => {
         return {
             ...style.button_style,
+        }
+    }
+    const getContainerInputFocusStyle = () => {
+        return {
+            ...styles.containerInput,
+            borderColor: '#009245',
+            borderWidth: 2
+        }
+    };
+    const getContainerInputUnFocusStyle = () => {
+        return {
+            ...styles.containerInput,
+            borderColor: '#8B8B8B',
+            borderWidth: 1,
+        }
+    };
+
+    const getIconEyeStyle = () => {
+        return {
+            width: 29,
+            height: 24
+        }
+    };
+
+    const getInputTextStyle = () => {
+        return {
+            flex: 1
         }
     }
     return (
@@ -41,18 +70,35 @@ const Log_in = () => {
             }}>
                 Đăng nhập tài khoản
             </Text>
-            
+            <AppInput
+                placeholder={'Nhập email hoặc số điện thoại'}
+                styles={{
+                    containerFocus: getContainerInputFocusStyle(),
+                    containerUnFocus: getContainerInputUnFocusStyle(),
+                    icon: getIconEyeStyle(),
+                    inputText: getInputTextStyle()
+                }}
+            />
+            <AppInput
+                placeholder={'Mật khẩu'}
+                styles={{
+                    containerFocus: getContainerInputFocusStyle(),
+                    containerUnFocus: getContainerInputUnFocusStyle(),
+                    icon: getIconEyeStyle(),
+                    inputText: getInputTextStyle()
+                }}
+                isPassword={true}
+            />
+
             <Buton_app
                 style={{
                     btl: btl_style(),
                 }}
             >
             </Buton_app>
-
         </View>
     )
 }
 
 export default Log_in
-
 
