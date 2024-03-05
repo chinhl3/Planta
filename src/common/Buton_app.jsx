@@ -5,7 +5,7 @@ import { LinearGradient } from 'react-native-linear-gradient';
 const Buton_app = (props) => {
   const {style} =props
   return (
-    <TouchableOpacity>
+    <TouchableOpacity >
       <LinearGradient
         colors={['#007537', '#4CAF50']}
         style={style.btl}

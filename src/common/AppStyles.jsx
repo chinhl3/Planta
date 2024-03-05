@@ -12,7 +12,7 @@ export default styles = StyleSheet.create({
     },
     width_img_100: {
         width: '100%',
-        height: 300
+        height: 400
     },
     button_style: {
         width: 300,
@@ -31,10 +31,16 @@ export default styles = StyleSheet.create({
         borderRadius: 10,
         flexDirection: 'row',
         paddingHorizontal: 10,
-        alignItems: 'center'
+        alignItems: 'center',
+        marginLeft: 50,
+        marginTop:10
     },
     icon: {
         width: 24, height: 24
+    },
+    view_row:{
+        flexDirection: 'row',
+       
     }
 
 })
