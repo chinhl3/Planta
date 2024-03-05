@@ -2,12 +2,11 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 const img_header = (props) => {
-    const {require1} =props
-    console.log("link:"+require1)
+  
+    const {require1,style} =props
     
   return (
-    <Image source={require1}/>
-  
+    <Image style={style.width_img} source={require1}/>
   )
 }
 
