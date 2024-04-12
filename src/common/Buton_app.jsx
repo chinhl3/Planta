@@ -1,11 +1,17 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { LinearGradient } from 'react-native-linear-gradient';
+import axios from 'react-native-axios'
 
 const Buton_app = (props) => {
-  const {style} =props
+  const [check, setcheck] = useState('');
+  
+  const {style,text,onPress,} =props
+
   return (
-    <TouchableOpacity >
+    <TouchableOpacity 
+    onPress={onPress}
+    >
       <LinearGradient
         colors={['#007537', '#4CAF50']}
         style={style.btl}
@@ -20,7 +26,7 @@ const Buton_app = (props) => {
             fontWeight:'700',
             color:'white',
             fontFamily:'Poppins-Regular'
-          }}>Đăng nhập</Text>
+          }}>{text}</Text>
       </LinearGradient>
     </TouchableOpacity>
   )
